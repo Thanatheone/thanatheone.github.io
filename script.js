@@ -7,7 +7,7 @@
  * @param {number} [options.delay=150] – Milliseconds between keystrokes.
  * @param {boolean} [options.loop=false] – Whether to repeat forever.
  */
-async function typewrite(text, { target = document, delay = 150, loop = false } = {}) {
+async function typewrite(text, { target = document, delay = 200, loop = false } = {}) {
     // Helper that writes either to document.title or to an element’s textContent
     const set = val =>
         target === document
@@ -26,7 +26,7 @@ async function typewrite(text, { target = document, delay = 150, loop = false } 
         }
 
         // If we’re looping, pause briefly before starting over
-        if (loop) await sleep(800);
+        if (loop) await sleep(1200);
     } while (loop);
 }
 
@@ -39,7 +39,7 @@ function sleep(ms) {
 
 /* -------------------- Example usage --------------------------- */
 // Loop the title forever, typing a bit faster than the default
-typewrite("Thana's Portfolio", { delay: 120, loop: true });
+typewrite("Thana's Portfolio", { delay: 150, loop: true });
 
 /* --------------------------------------------------------------
    If you prefer to animate an element instead of the title,
