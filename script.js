@@ -18,3 +18,4 @@ async function typewrite(
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+typewrite("Thana's Portfolio", { delay: 150, loop: true });
