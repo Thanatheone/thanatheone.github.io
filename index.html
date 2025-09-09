@@ -31,17 +31,18 @@
         text-decoration: underline;
     }
     .banner {
-        width: 100%;
-        background: #004d40;
+        position: absolute;
+        inset: 0;
+        background: #ffe6a7;
         color: #fff;
         font-family: "Montserrat", sans-serif;
         font-size: 1rem;
         line-height: 1.4;
-        position: sticky;
-        top: 0;
-        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 999;
-        }
+    }
 
     .banner__content {
         max-width: 1200px;
@@ -56,23 +57,7 @@
         color: #ffeb3b;
         text-decoration: underline;
     }
-    
-    .banner__close {
-        background: transparent;
-        border: none;
-        color: #fff;
-        font-size: 1.25rem;
-        line-height: 1;
-        cursor: pointer;
-        padding: 0;
-        margin-left: 1rem;
-    }
-    
-    .banner__close:hover,
-    .banner__close:focus {
-        color: #ffeb3b;
-    }
-    
+
     .new {background: #e8f5e9; padding: 1rem;}
     .dedicated {background: #fffde7; padding: 1rem;}
 </style>
@@ -81,8 +66,8 @@
 <body>
     <div id="banner" class="banner">
         <div class="banner_content"
-        <span class="banner__text">Thana's Portfolio 
-            <a href="#projects">See me latest projects</a>
+        <span class="banner__text"> <h1>Thana's Portfolio</h1> 
+            <a href="#projects">See my latest projects</a>
         </span>
         </div>
     </div>
