@@ -3,17 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Thana's Autumn Portfolio – Web Developer and Designer" />
-  <title>Thana's Portfolio</title>
-
+  <meta name="description" content="Thana's Autumn Portfolio – Front-end Web Developer specializing in creative, nature-inspired web experiences" />
+  <meta name="keywords" content="web developer, front-end, portfolio, JavaScript, HTML, CSS" />
+  <meta name="author" content="Thana" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Thana's Portfolio - Front-end Developer" />
+  <meta property="og:description" content="Crafting web experiences inspired by the warmth of autumn" />
+  <meta property="og:type" content="website" />
+  
+  <title>Thana's Portfolio - Front-end Developer</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
-
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <header class="navbar">
-    <div class="logo">Thana<span>Dev</span></div>
-    <nav>
+    <div class="logo" aria-label="Thana Dev Logo">Thana<span>Dev</span></div>
+    <nav aria-label="Main navigation">
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -22,50 +42,85 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1 id="typewriter"></h1>
-      <p>Crafting web experiences inspired by the warmth of autumn.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a front-end developer who blends creativity with technology.  
-      My work is inspired by nature’s transitions — warm, thoughtful, and adaptable.
-    </p>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="images/project1.jpg" alt="Portfolio Project" />
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio built with HTML, CSS, and JavaScript.</p>
+  <main id="main">
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-content">
+        <h1 id="typewriter" aria-live="polite"></h1>
+        <p>Crafting web experiences inspired by the warmth of autumn.</p>
+        <a href="#projects" class="btn">View My Work</a>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="images/project2.jpg" alt="Weather App" />
-        <h3>Weather App</h3>
-        <p>Real-time weather app using OpenWeather API and vanilla JS.</p>
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I'm a front-end developer who blends creativity with technology.  
+          My work is inspired by nature's transitions — warm, thoughtful, and adaptable.
+        </p>
+        <div class="skills">
+          <h3>Skills & Technologies</h3>
+          <ul class="skill-list">
+            <li><span class="skill-tag">HTML5</span></li>
+            <li><span class="skill-tag">CSS3</span></li>
+            <li><span class="skill-tag">JavaScript</span></li>
+            <li><span class="skill-tag">Responsive Design</span></li>
+            <li><span class="skill-tag">API Integration</span></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Let’s build something meaningful together.</p>
-    <a href="mailto:thanatheone@gmail.com" class="btn">Email Me</a>
-  </section>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="images/project1.jpg" alt="Screenshot of portfolio website homepage" loading="lazy" />
+          <div class="project-content">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio built with HTML, CSS, and JavaScript.</p>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/thanatheone" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="project-card">
+          <img src="images/project2.jpg" alt="Screenshot of weather app interface" loading="lazy" />
+          <div class="project-content">
+            <h3>Weather App</h3>
+            <p>Real-time weather app using OpenWeather API and vanilla JS.</p>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/thanatheone" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Let's build something meaningful together.</p>
+      <div class="contact-options">
+        <a href="mailto:thanatheone@gmail.com" class="btn" aria-label="Send email to Thana">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Email Me
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Thana. All Rights Reserved.</p>
+    <p>&copy; 2025 Thana. All Rights Reserved.</p>
     <div class="socials">
-      <a href="https://github.com/thanatheone" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com/thanatheone" target="_blank" rel="noopener noreferrer" aria-label="Visit Thana's GitHub profile">GitHub</a>
+      <span aria-hidden="true">|</span>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Thana's LinkedIn profile">LinkedIn</a>
     </div>
   </footer>
 
